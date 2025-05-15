@@ -15,5 +15,5 @@ export default function Garrafa() {
     }
   })
 
-  return <primitive object={gltf.scene} ref={ref} scale={1.5} />
+  return <primitive object={gltf.scene} ref={ref} scale={0.3} />
 }
