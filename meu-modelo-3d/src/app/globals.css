@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Alpino';
+  src: url('/fonts/Alpino-Variable.woff2') format('woff2'),
+       url('/fonts/Alpino-Variable.woff') format('woff');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-alpino: 'Alpino', sans-serif;
+  --brand-purple: #B536F6;
+  --brand-light-purple: #DCAEFF;
 }
 
 @theme inline {
@@ -10,6 +22,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-custom: var(--font-alpino);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +32,78 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.font-alpino {
+  font-family: var(--font-alpino);
+}
+
+.font-alpino-regular {
+  font-family: var(--font-alpino);
+  font-weight: 400;
+}
+
+.font-alpino-medium {
+  font-family: var(--font-alpino);
+  font-weight: 500;
+}
+
+.font-alpino-bold {
+  font-family: var(--font-alpino);
+  font-weight: 700;
+}
+
+.font-alpino-black {
+  font-family: var(--font-alpino);
+  font-weight: 900;
+}
+
+.line-height-compact {
+  line-height: 80.9%;
+}
+
+.line-height-88 {
+  line-height: 88%;
+}
+
+.line-height-100 {
+  line-height: 100%;
+}
+
+.text-brand-purple {
+  color: var(--brand-purple);
+}
+
+.text-brand-light-purple {
+  color: var(--brand-light-purple);
+}
+
+.bg-brand-purple {
+  background-color: var(--brand-purple);
+}
+
+.shop-now-button {
+  background-color: var(--brand-purple);
+  color: white;
+  /* Padding é definido no componente com as classes px-8 py-4 */
+  border-radius: 9999px;
+  font-family: var(--font-alpino);
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.05em;
+}
+
+.shop-now-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(181, 54, 246, 0.3);
+  filter: brightness(110%);
+}
+
