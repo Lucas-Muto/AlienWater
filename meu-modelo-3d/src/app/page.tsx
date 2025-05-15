@@ -155,7 +155,7 @@ export default function Home() {
         // markers: true,
         onUpdate: (self) => {
           // Mostrar texto com fade in baseado no progresso
-          setShowAboutText(self.progress > 0.5); // Alterado: Diminui o threshold para mostrar o texto mais cedo
+          setShowAboutText(self.progress > 0.7); // Alterado: Diminui o threshold para mostrar o texto mais cedo
         }
       });
     }
