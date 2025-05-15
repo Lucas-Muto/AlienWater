@@ -1,0 +1,197 @@
+# Visão Geral  
+O AlienWater é um site imersivo de portfólio para um produto fictício de refrigerante com tema alienígena. O site utiliza animações 3D avançadas e interações modernas para criar uma experiência digital única que simula a exploração de uma nave espacial vendendo refrigerantes galácticos. Este projeto demonstra habilidades técnicas avançadas em desenvolvimento web moderno, particularmente com Next.js, TailwindCSS, Three.js e React Three Fiber.
+
+# Funcionalidades Principais  
+## Experiência 3D Imersiva
+- **O que faz**: Apresenta modelos 3D de latas de refrigerante que giram, flutuam e reagem ao scroll do usuário
+- **Por que é importante**: Diferencia o site de experiências web convencionais e cria uma conexão emocional imediata
+- **Como funciona**: Utiliza React Three Fiber e Three.js para renderizar modelos GLTF otimizados em um canvas HTML
+
+## Navegação por Scroll com Animações Sincronizadas
+- **O que faz**: Transforma o ato de rolar a página em uma jornada visual com animações precisas
+- **Por que é importante**: Mantém o usuário engajado e cria uma narrativa visual coesa
+- **Como funciona**: Implementa ScrollTrigger do GSAP para sincronizar animações de elementos 3D e 2D com a posição do scroll
+
+## Seletor Interativo de Sabores
+- **O que faz**: Permite aos usuários alternar entre três variantes do produto com visualização 3D
+- **Por que é importante**: Demonstra os diferentes "sabores" da linha de produtos e incentiva a exploração
+- **Como funciona**: Interface tipo "escolher personagem" com modelos 3D que trocam com animações fluidas
+
+## Efeitos Visuais Alienígenas
+- **O que faz**: Implementa efeitos visuais únicos como distorções, glitches e iluminação alienígena
+- **Por que é importante**: Reforça o tema alienígena e cria momentos memoráveis durante a navegação
+- **Como funciona**: Combina shaders personalizados, pós-processamento e efeitos de partículas
+
+## Design Responsivo Adaptativo
+- **O que faz**: Adapta toda a experiência para funcionar perfeitamente em dispositivos móveis até desktops
+- **Por que é importante**: Garante acessibilidade em todos os dispositivos sem comprometer a experiência
+- **Como funciona**: Utiliza abordagem mobile-first com TailwindCSS e adaptações específicas para elementos 3D
+
+# Experiência do Usuário  
+## Personas
+- **Entusiastas de Design**: Profissionais e estudantes de design buscando inspiração em interfaces inovadoras
+- **Desenvolvedores Web**: Programadores interessados em implementações avançadas de 3D na web
+- **Clientes Potenciais**: Empresas buscando exemplos de sites de produtos criativos e envolventes
+
+## Fluxos de Usuário Principais
+1. **Experiência de Primeiro Contato**:
+   - Usuário acessa o site e vê a lata 3D em destaque
+   - Indicação sutil para rolar para baixo
+   - Primeiras animações são ativadas ao iniciar o scroll
+
+2. **Exploração de Sabores**:
+   - Usuário chega à seção de seletor de sabores
+   - Alterna entre as três variantes usando controles intuitivos
+   - Cada seleção revela informações específicas daquele sabor
+
+3. **Descoberta de Características**:
+   - Continuando o scroll, o usuário descobre mais sobre o produto
+   - Textos e elementos visuais aparecem sincronizados
+   - A lata 3D se move e rotaciona revelando diferentes ângulos
+
+4. **Finalização**:
+   - Seção final com chamada para ação e resumo da marca
+   - Elementos visuais convergem para um final memorável
+   - Opções de compartilhamento ou contato
+
+## Considerações de UI/UX
+- Feedback visual constante para indicar interatividade
+- Indicadores de progresso do scroll sutis mas eficazes
+- Contraste adequado entre elementos 3D e informações textuais
+- Opção para usuários com dispositivos de baixo desempenho optarem por uma versão mais leve
+
+# Arquitetura Técnica  
+## Componentes do Sistema
+- **Front-end**: Aplicação Next.js com App Router
+- **Renderização 3D**: React Three Fiber, Drei, Three.js
+- **Animações**: Framer Motion para UI e GSAP para sincronização com scroll
+- **Estilização**: TailwindCSS com sistema de design consistente
+- **Gerenciamento de Estado**: Zustand para estado global leve
+
+## Modelos de Dados
+- **Produtos**: Informações sobre cada variante de produto (sabor, cor, características)
+- **Conteúdo**: Textos, headlines e descrições para cada seção
+- **Configurações**: Parâmetros de animação e renderização ajustáveis
+
+## APIs e Integrações
+- **Cloudinary**: Armazenamento e otimização de assets
+- **Performance Analytics**: Monitoramento opcional de métricas de desempenho
+- **CMS Headless** (opcional para fase posterior): Gerenciamento de conteúdo
+
+## Requisitos de Infraestrutura
+- **Hospedagem**: Vercel para Next.js
+- **CDN**: Integrado com Vercel Edge Network
+- **Armazenamento**: Cloudinary para assets otimizados
+
+# Roadmap de Desenvolvimento  
+## Requisitos de MVP
+### Fase 1: Fundação
+- Setup do projeto Next.js com App Router
+- Configuração do TailwindCSS com tema base
+- Implementação da estrutura básica de componentes
+- Integração inicial do React Three Fiber
+
+### Fase 2: Implementação da Hero Section
+- Modelo 3D da lata principal funcionando
+- Animação básica de rotação e flutuação
+- Iluminação e ambiente alienígena
+- Layout responsivo da seção hero
+
+### Fase 3: Sistema de Scroll e Seções
+- Implementação do ScrollTrigger
+- Desenvolvimento da seção de scroll com animações
+- Transições entre seções funcionando
+- Otimização inicial de performance
+
+### Fase 4: Seletor de Sabores
+- Interface do seletor de sabores
+- Três modelos 3D de latas carregando
+- Animações de transição entre sabores
+- Informações de produto sincronizadas
+
+### Fase 5: Finalização e Polimento
+- Seção final com elementos conclusivos
+- Otimização geral de performance
+- Testes em múltiplos dispositivos
+- Deploy da versão MVP na Vercel
+
+## Aprimoramentos Futuros
+### Experiência Aprimorada
+- Efeitos de áudio sincronizados com animações
+- Modo de visualização em realidade aumentada
+- Customização de cores pelo usuário
+- Modo noturno/diurno automatizado
+
+### Recursos Adicionais
+- Sistema de "Compra" simulada
+- Minijogo alienígena escondido
+- Versão 3D em tela cheia opcional
+- Modo de visualização técnica dos modelos
+
+### Integração e Expansão
+- Integração com CMS para gerenciamento de conteúdo
+- Analytics detalhado de interação do usuário
+- Micro-animações adicionais para elementos de UI
+- Expansão para linha completa de produtos
+
+# Cadeia de Dependência Lógica
+## Fundação (Crítico)
+1. Setup do ambiente Next.js/TailwindCSS
+2. Estrutura base de componentes
+3. Canvas 3D funcional com primeiro modelo
+
+## Caminho Crítico Visual
+4. Implementação da Hero Section completa
+5. Navegação básica entre seções
+6. Sistema de scroll com triggering de animações
+
+## Expansão de Funcionalidades
+7. Implementação do seletor de sabores
+8. Desenvolvimento da seção de características
+9. Finalização com chamada para ação
+
+## Polimento
+10. Efeitos visuais avançados (partículas, distorções)
+11. Otimização de desempenho geral
+12. Testes abrangentes e correções
+
+# Riscos e Mitigações  
+## Desafios Técnicos
+- **Risco**: Desempenho inadequado em dispositivos móveis devido ao conteúdo 3D pesado
+  - **Mitigação**: Implementar detecção de capacidade do dispositivo e versões simplificadas dos modelos; usar LOD (Level of Detail)
+
+- **Risco**: Inconsistências de renderização entre navegadores
+  - **Mitigação**: Testar em múltiplos navegadores desde o início; implementar fallbacks para recursos não suportados
+
+- **Risco**: Problemas de memória com modelos 3D complexos
+  - **Mitigação**: Otimizar geometria e texturas; implementar garbage collection adequado; usar instancing
+
+## Definição do MVP
+- **Risco**: Escopo excessivamente ambicioso para o MVP
+  - **Mitigação**: Priorizar rigorosamente funcionalidades; focar em uma experiência básica completa antes de adicionar recursos avançados
+
+- **Risco**: Perfeição visual versus tempo de desenvolvimento
+  - **Mitigação**: Estabelecer padrões mínimos viáveis para cada elemento visual; implementar melhorias incrementais
+
+## Restrições de Recursos
+- **Risco**: Complexidade de animações sincronizadas consumindo muito tempo de desenvolvimento
+  - **Mitigação**: Criar sistema reutilizável de gatilhos de animação; começar com versões simplificadas
+
+- **Risco**: Curva de aprendizado com WebGL e Three.js
+  - **Mitigação**: Utilizar exemplos e componentes da comunidade; começar com implementações básicas e evoluir gradualmente
+
+# Apêndice  
+## Referências Técnicas
+- Documentação do React Three Fiber: https://docs.pmnd.rs/react-three-fiber
+- Guia de animações com GSAP ScrollTrigger: https://greensock.com/scrolltrigger/
+- Otimização de modelos 3D para web: https://gltf.report/
+
+## Inspirações Visuais
+- Site Fizzi Demo (https://fizzi-demo.vercel.app) para referência de layout e fluidez
+- Estética alienígena inspirada em filmes de ficção científica contemporâneos
+- Design de UI futurista com elementos holográficos
+
+## Especificações Técnicas
+- Formatos de modelo: GLTF/GLB otimizados
+- Padrões de compressão para texturas: KTX2 com Basis Universal
+- Requisitos mínimos recomendados: Dispositivos com WebGL 2.0 
