@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import ViewCanvas from '../components/ViewCanvas';
 
 // Registrar plugins do GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -209,9 +210,14 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-purple-900 to-indigo-900 min-h-screen">
+    <div className="bg-gradient-to-b from-purple-900 to-indigo-900 min-h-screen w-full overflow-hidden">
       {/* Primeira seção - Hero */}
-      <section className="relative w-full h-screen flex flex-col items-center justify-center">
+      <section className="relative w-full h-screen flex flex-col items-center justify-center" style={{ position: 'relative'}}>
+        {/* Canvas 3D posicionado como um fundo */}
+        <div className="absolute inset-0 z-50">
+          <ViewCanvas />
+        </div>
+        
         <div className="text-center p-6">
           {/* "STAY FRESH" dividido em duas partes para animação separada */}
           <h1 className="text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-alpino-black line-height-compact text-brand-light-purple">
@@ -245,7 +251,7 @@ export default function Home() {
       </section>
 
       {/* Segunda seção - "TRY ALL THREE FLAVORS" */}
-      <section ref={secondSectionRef} className="w-full min-h-screen flex items-start pt-24 pb-16">
+      <section ref={secondSectionRef} className="w-full min-h-screen flex items-start pt-24 pb-16" style={{ position: 'relative', zIndex: 50 }}>
         <div className="container mx-auto px-6 md:px-12 lg:px-15">
           <div className="max-w-3xl">
             {/* "TRY ALL THREE FLAVORS" com efeito elástico em cada letra */}

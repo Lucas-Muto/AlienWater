@@ -32,8 +32,9 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -68,14 +69,6 @@ body {
 
 .line-height-compact {
   line-height: 80.9%;
-}
-
-.line-height-88 {
-  line-height: 88%;
-}
-
-.line-height-100 {
-  line-height: 100%;
 }
 
 .text-brand-purple {
