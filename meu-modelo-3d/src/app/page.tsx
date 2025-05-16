@@ -220,7 +220,7 @@ export default function Home() {
         
         <div className="text-center p-6">
           {/* "STAY FRESH" dividido em duas partes para animação separada */}
-          <h1 className="text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-alpino-black line-height-compact text-brand-light-purple">
+          <h1 className="text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-alpino-black line-height-compact text-brand-light-purple mt-[-100px]">
             <span ref={stayRef} className="inline-block">STAY</span><br />
             <span ref={freshRef} className="inline-block">FRESH</span>
           </h1>
@@ -240,9 +240,11 @@ export default function Home() {
           >
             2-4g sugar. 9g fiber. 3 delicious flavors.
           </p>
-          
-          {/* "SHOP NOW" button - fill B536F6, text Alpino Bold FFFFFF */}
-          <div className="mt-[75px]" ref={buttonRef}>
+        </div>
+
+        {/* Botão em uma camada separada com pointer-events habilitados */}
+        <div className="absolute z-[100] bottom-[18%] pointer-events-auto">
+          <div ref={buttonRef}>
             <button className="shop-now-button font-alpino-bold uppercase text-lg md:text-xl px-8 py-4">
               SHOP NOW
             </button>

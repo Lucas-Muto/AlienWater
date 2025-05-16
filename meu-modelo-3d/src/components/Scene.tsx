@@ -36,13 +36,14 @@ export default function Scene() {
     ) return;
     
     //Set can starting location
-    gsap.set(can1Ref.current.position, {x: -3.4});
+    gsap.set(can1Ref.current.position, {x: -3.7});
     gsap.set(can1Ref.current.rotation, {z: -0.2});
     gsap.set(can1Ref.current.rotation, { y: Math.PI / 6 }); // ~45 graus à direita
 
-    gsap.set(can2Ref.current.position, {x: 3.4});
+    gsap.set(can2Ref.current.position, {x: 3.7});
     gsap.set(can2Ref.current.rotation, {z: 0.2});
     gsap.set(can2Ref.current.rotation, { y: Math.PI / -6 }); // ~45 graus à direita
+  
 
     gsap.set(can3Ref.current.position, {y:5, z:2});
     gsap.set(can4Ref.current.position, {y:5, z:2});
